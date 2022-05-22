@@ -41,12 +41,9 @@ export class FetchApiDataService {
    * @param password 
    * @returns data of the user in JSON format
    */
-  public userLogin(username: any, password: any): Observable<any> {
+  public userLogin(userDetails: any): Observable<any> {
     return this.http
-      .post(apiUrl + 'login', {
-        Username: username,
-        Password: password
-      })
+      .post(apiUrl + 'login', userDetails)
       .pipe(
         catchError(this.handleError)
       );
