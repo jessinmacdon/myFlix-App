@@ -16,7 +16,8 @@ const username = localStorage.getItem('user');
 @Injectable({
   providedIn: 'root'
 })
-export class UserRegistrationService {
+
+export class FetchApiDataService {
   // Inject HttpClient module to constructor params
   constructor(private http: HttpClient) { }
 
@@ -253,10 +254,10 @@ export class UserRegistrationService {
         `Error Body is: ${error.error}`
       );
     }
-    return throwError(() => error);
-    // return throwError(
-    //   'Something bad happened; please try again later.'
-    // );
+    //return throwError(() => error);
+    return throwError(
+      'Something bad happened; please try again later.'
+    );
   }
 
 }
