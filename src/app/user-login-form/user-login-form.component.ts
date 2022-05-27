@@ -30,7 +30,6 @@ export class UserLoginFormComponent implements OnInit {
     this.fetchApiData.userLogin(this.userData).subscribe((result) => {
       // TBD: Logic for successfull login!
       this.dialogRef.close(); // Close the modal on success
-      console.log(result);
       // Add token and username to local Storage
       localStorage.setItem('token', result.token);
       localStorage.setItem('user', result.user.Username);
@@ -39,7 +38,6 @@ export class UserLoginFormComponent implements OnInit {
       });
       this.router.navigate(['movies']);
     }, (result) => {
-      console.log(result);
       this.snackBar.open(result, 'OK', {
         duration: 2000
       });

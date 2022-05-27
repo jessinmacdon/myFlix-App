@@ -35,7 +35,6 @@ export class ProfileComponent implements OnInit {
   getUser(): void {
     this.fetchApiData.getUser().subscribe((resp: any) => {
       this.user = resp;
-      console.log(this.user);
       return this.user;
     })
   }
@@ -44,8 +43,10 @@ export class ProfileComponent implements OnInit {
    * opens the edit profile dialog from EditProfileComponent to allow user to edit their details
    */
   openEditProfileDialog(): void {
+    console.log("this.user --> ", this.user)
     this.dialog.open(EditProfileComponent, {
-      width: '300px'
+      width: '300px',
+      data: { userData: this.user }
     })
   }
 
@@ -62,7 +63,6 @@ export class ProfileComponent implements OnInit {
         });
       })
       this.fetchApiData.deleteUser().subscribe((result) => {
-        console.log(result);
         localStorage.clear();
       });
     }

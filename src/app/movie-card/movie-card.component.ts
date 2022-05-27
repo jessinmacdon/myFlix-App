@@ -35,7 +35,6 @@ export class MovieCardComponent implements OnInit {
   getMovies(): void {
     this.fetchApiData.getAllMovies().subscribe((resp: any) => {
       this.movies = resp;
-      console.log(this.movies);
       return this.movies;
     });
   }
@@ -47,7 +46,6 @@ export class MovieCardComponent implements OnInit {
   getFavouriteMovies(): void {
     this.fetchApiData.getFavouriteMovies().subscribe((resp: any) => {
       this.favouriteMovies = resp;
-      console.log(this.favouriteMovies);
       return this.favouriteMovies;
     });
   }
@@ -82,12 +80,13 @@ export class MovieCardComponent implements OnInit {
   * @param name
   * @param bio
   */
-  openDirectorDialog(name: string, bio: string, birthday: Date): void {
+  openDirectorDialog(name: string, bio: string, birth: Date, death: Date): void {
     this.dialog.open(DirectorComponent, {
       data: {
         Name: name,
         Bio: bio,
-        Birthday: birthday,
+        Birth: birth,
+        Death: death,
       },
       // Assign dialog width
       width: '500px'
@@ -117,10 +116,8 @@ export class MovieCardComponent implements OnInit {
    * @param id 
    */
   addToFavouriteMovies(id: string): void {
-    console.log(id);
     this.fetchApiData.addFavouriteMovie(id).subscribe((result) => {
-      console.log(result);
-      this.snackBar.open('Successfully added movie to favorites!', 'OK', {
+      this.snackBar.open('Successfully added movie to favourites!', 'OK', {
         duration: 2000
       });
       this.ngOnInit();
@@ -132,10 +129,8 @@ export class MovieCardComponent implements OnInit {
    * @param id 
    */
   removeFromFavouriteMovies(id: string): void {
-    console.log(id);
     this.fetchApiData.removeFavouriteMovie(id).subscribe((result) => {
-      console.log(result);
-      this.snackBar.open('Successfully removed movie from favorites!', 'OK', {
+      this.snackBar.open('Successfully removed movie from favourites!', 'OK', {
         duration: 2000
       });
       this.ngOnInit();

@@ -21,7 +21,7 @@ export class WelcomePageComponent implements OnInit {
   openUserRegistrationDialog(): void {
     this.dialog.open(UserRegistrationFormComponent, {
       // Assigning dialog width
-      width: '480px'
+      width: '500px'
     });
   }
 
@@ -31,7 +31,7 @@ export class WelcomePageComponent implements OnInit {
   openUserLoginDialog(): void {
     this.dialog.open(UserLoginFormComponent, {
       // Assigning dialog width
-      width: '480px'
+      width: '500px'
     });
   }
 }
