@@ -170,8 +170,10 @@ import { RouterModule, Routes } from '@angular/router';
 
 1. If not done yet: Create github repository for application
 
-2. If also not done yet: Link the new remote repository to the local project folder. To do so, simply run this command from inside your project folder (replace <GitHub-username> and <repository-name> with your own GitHub username and repository name): git remote add origin <https://github.com/<GitHub-username>/<repository-name>/.git>
-
+2. If also not done yet: Link the new remote repository to the local project folder. To do so, simply run this command from inside your project folder (replace `<GitHub-username>` and `<repository-name>` with your own GitHub username and repository name): 
+```
+git remote add origin https://github.com/<GitHub-username>/<repository-name>/.git
+```
 3. Add angular-cli-ghpages by running 
 ```
 ng add angular-cli-ghpages.
