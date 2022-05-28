@@ -61,24 +61,24 @@ I use **Angular Material** to style the UI of my application to make it responsi
 ## Development Process for the movies application
 ### Install Angular
 1. Check if Angular is already installed on device
-```-zsh
+```
 ng --version
 ```
 
 2. If not, install Angular
-```-zsh
+```
 npm install -g @angular/cli
 ```
 
 ---
 ### Create a new Angular project
 1. Navigate to folder and create project
-```-zsh
+```
 ng new my-project-name
 ```
 
 2. Navigate to project folder to run project
-```-zsh
+```
 ng serve --open
 ```
 
@@ -86,7 +86,7 @@ ng serve --open
 ### Set up app to load data from movie API
 1. Set up Angular HttpClient
   1.1. Go to app.module.ts and add
-  ```-zsh
+  ```
   import { HttpClientModule } from '@angular/common/http';
   ```
 
@@ -94,12 +94,12 @@ ng serve --open
 
 2. Create Angular Service for Consuming REST API 
   2.1 Create a new Service inside app folder
-  ```-zsh
+  ```
   ng generate service fetch-api-data
   ```
 
   2.2. Add import statements to fetch-api-data.service.ts file
-  ```-zsh
+  ```
   import { catchError } from 'rxjs/internal/operators';
   import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
   import { Observable, throwError } from 'rxjs';
@@ -123,7 +123,7 @@ ng serve --open
 ---
 ### Add Angular Material to application
 1. Install project dependency
-```-zsh
+```
 $ ng add @angular/material
 ```
 
@@ -134,7 +134,7 @@ $ ng add @angular/material
 ---
 ### Create components for user to use application
 Using the command:
-```-zsh
+```
 $ ng generate component my-component-name
 ```
 
@@ -154,12 +154,12 @@ Structure of components:
 ---
 ### Add routing to application
 1. Import Angular's built-in router:
-```-zsh
+```
 import { RouterModule, Routes } from '@angular/router';
 ```
 
 2. Add to app.component.html
-```-zsh
+```
 <router-outlet></router-outlet> 
 ```
 
@@ -173,24 +173,24 @@ import { RouterModule, Routes } from '@angular/router';
 2. If also not done yet: Link the new remote repository to the local project folder. To do so, simply run this command from inside your project folder (replace <GitHub-username> and <repository-name> with your own GitHub username and repository name): git remote add origin https://github.com/<GitHub-username>/<repository-name>.git
 
 3. Add angular-cli-ghpages by running 
-```-zsh
+```
 ng add angular-cli-ghpages.
 ```
 
 4. Build your application (i.e., generate static HTML, CSS, and JavaScript files out of your application so that browsers can interpret them without the need to use any extra tools/plugins). To do so, run the following command, replacing <repository-name> with your own repository name:
-```-zsh
+```
  ng deploy --base-href=/<repository-name>/.
 ```
 ---
 ### Add TypeDoc Documentation
 1. Install typedoc (if not yet installed):
-```-zsh
+```
 npm install typedoc
 ```
 
 2. Check that code is commented adhering to best practices
 
 3. Run typedoc to create documentation:
-```-zsh
-typedoc --entryPointStrategy expand ./src
+```
+ npx typedoc --out docs --entryPointStrategy expand ./src
 ```
