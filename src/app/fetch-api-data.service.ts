@@ -144,7 +144,7 @@ export class FetchApiDataService {
 
   /**
    * calls API endpoint to get a users list of favourite movies 
-   * @returns list of the user's favorite movies in JSON format
+   * @returns list of the user's favourite movies in JSON format
    */
   getFavouriteMovies(): Observable<any> {
     const token = localStorage.getItem('token');
