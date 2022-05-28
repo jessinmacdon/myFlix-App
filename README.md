@@ -26,13 +26,16 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
+---
 ## Description
 For this project, I revisited the myFlix movie API I built some time ago. Using Angular to build a client App pulling data from the myFlixDB through API calls.
 
+---
 ### User Stories
 * As a user, I want to be able to receive information on movies, directors, and genres so that I can learn more about movies I’ve watched or am interested in.
 * As a user, I want to be able to create a profile so I can save data about my favourites movies.
 
+---
 ### Key Features
 * Welcome view where users are able to either log in or register an account
 * Upon authentication, display a view of all Movies
@@ -41,18 +44,20 @@ additional movie details will be displayed. The single movie view will contain t
   * A button that when clicked takes a user to the ​director view,​ where details about the director of that particular movie will be displayed.
   * A button that when clicked takes a user to the ​genre view,​ where details about that particular genre of the movie will be displayed.
 
-
+---
 ### What technology did I use and why?
 
 I chose to create the application using **Angular** due to the following considerations:
 
 I use **Angular Material** to style the UI of my application to make it responsive and take advantage of the ready to use components, such as mat cards.
 
+---
 ### What challenges did I face, what did I learn?
 * Transferring data from one component to the other (e.g., from movie-card-component to genre-component). Found the solution by 'Injecting' the variables using @Inject(MAT_DIALOG_DATA).
 
 * The application requires a service to get the favourites movies of a user. As this API endpoint was not defined yet, I had to go back to the backend code and add this GET endpoint.
 
+---
 ## Development Process for the movies application
 ### Install Angular
 1. Check if Angular is already installed on device
@@ -65,6 +70,7 @@ ng --version
 npm install -g @angular/cli
 ```
 
+---
 ### Create a new Angular project
 1. Navigate to folder and create project
 ```-zsh
@@ -76,6 +82,7 @@ ng new my-project-name
 ng serve --open
 ```
 
+---
 ### Set up app to load data from movie API
 1. Set up Angular HttpClient
   1.1. Go to app.module.ts and add
@@ -113,7 +120,7 @@ ng serve --open
 * Delete user and
 * Delete a movie from the favourites movies
 
-
+---
 ### Add Angular Material to application
 1. Install project dependency
 ```-zsh
@@ -124,6 +131,7 @@ $ ng add @angular/material
 
 3. Add modules to imports array to serve to other components
 
+---
 ### Create components for user to use application
 Using the command:
 ```-zsh
@@ -143,7 +151,7 @@ Structure of components:
 * Profile View
   * Edit profile dialog
 
-
+---
 ### Add routing to application
 1. Import Angular's built-in router:
 ```-zsh
@@ -157,6 +165,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 3. Create routes in app.module.ts
 
+---
 ### Deploy application on github pages
 
 1. If not done yet: Create github repository for application
@@ -172,7 +181,7 @@ ng add angular-cli-ghpages.
 ```-zsh
  ng deploy --base-href=/<repository-name>/.
 ```
-
+---
 ### Add TypeDoc Documentation
 1. Install typedoc (if not yet installed):
 ```-zsh
