@@ -22,11 +22,11 @@ export class UserRegistrationFormComponent implements OnInit {
   }
 
   /**
-   * sending form inputs for user registration to backend via fetchApiData Service
+   * using fetchApiData Service to post user registration form inputs to DB
    */
   registerUser(): void {
     this.fetchApiData.userRegistration(this.userData).subscribe((response) => {
-      // Logic for successfull registration!
+      // Logic - registration!
       this.dialogRef.close(); // Close the modal on success
       this.snackBar.open('User registered succesfully!', 'OK', {
         duration: 2000

@@ -4,7 +4,7 @@ import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http
 import { Observable, throwError } from 'rxjs';
 import { map } from 'rxjs/operators';
 
-// Declaring the API URL that provides data for the application
+// Declaring the API URL that provides - app data is pulled froom here 
 const apiUrl = 'https://macdon-myflix.herokuapp.com/'
 
 // Get Authorization token stored in local storage
@@ -22,7 +22,7 @@ export class FetchApiDataService {
   constructor(private http: HttpClient) { }
 
   /**
-   * calls API endpoint to register a new user
+   * calls API endpoint to register/create a new user
    * @param userDetails 
    * @returns a new user object in JSON format
    */
@@ -36,7 +36,7 @@ export class FetchApiDataService {
   }
 
   /**
-   * calls API endpoint to login an existing user
+   * calls API endpoint to login a user
    * @param userDetails 
    * @returns data of the user in JSON format
    */
@@ -49,7 +49,7 @@ export class FetchApiDataService {
   }
 
   /**
-   * calls API endpoint to get data on all movies
+   * calls API endpoint to get all movies
    * @returns array of all movies in JSON format
    */
   getAllMovies(): Observable<any> {
@@ -67,7 +67,7 @@ export class FetchApiDataService {
   }
 
   /**
-   * calls API endpoint to get data on a single movie specified by its title
+   * calls API endpoint to get a single movie specified by title
    * @param title 
    * @returns JSON object holding movie data
    */
@@ -86,7 +86,7 @@ export class FetchApiDataService {
   }
 
   /**
-   * calls API endpoint to get data on a director
+   * calls API endpoint to get director info
    * @param name 
    * @returns JSON obejct holding director data
    */
@@ -105,7 +105,7 @@ export class FetchApiDataService {
   }
 
   /**
-   * calls API endpoint to get data on a genre
+   * calls API endpoint to get genre info
    * @param name 
    * @returns JSON object holding genre data
    */
@@ -124,7 +124,7 @@ export class FetchApiDataService {
   }
 
   /**
-   * calls API endpoint to get data on a single user
+   * calls API endpoint to get data on a user
    * @returns JSON object holding data about the requested user
    */
   getUser(): Observable<any> {
@@ -143,7 +143,7 @@ export class FetchApiDataService {
   }
 
   /**
-   * calls API endpoint to get list of favorite movies of this user
+   * calls API endpoint to get a users list of favourite movies 
    * @returns list of the user's favorite movies in JSON format
    */
   getFavouriteMovies(): Observable<any> {
@@ -182,7 +182,7 @@ export class FetchApiDataService {
   }
 
   /**
-   * calls API endpoint to delete a movie from the user's list of favorite movies
+   * calls API endpoint to delete a movie from the user's list of favourite movies
    * @param movieID 
    * @returns JSON object holding data about the updated user
    */
@@ -222,7 +222,7 @@ export class FetchApiDataService {
   }
 
   /**
-   * calls API endpoint to deregister an existing user
+   * calls API endpoint to deregister/delete a user
    * @returns	A success message indicating that the profile was successfully deleted.
    */
   deleteUser(): Observable<any> {

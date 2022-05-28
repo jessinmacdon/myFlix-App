@@ -16,21 +16,21 @@ export class WelcomePageComponent implements OnInit {
   }
 
   /**
-     * opens the user registration dialog when signup button is clicked
+     * opens the user registration dialog(form) when signup button is clicked
      */
   openUserRegistrationDialog(): void {
     this.dialog.open(UserRegistrationFormComponent, {
-      // Assigning dialog width
+      // set dialog width
       width: '500px'
     });
   }
 
   /**
- * opens the user login dialog when login button is clicked
+ * opens the user login dialog(form) when login button is clicked
  */
   openUserLoginDialog(): void {
     this.dialog.open(UserLoginFormComponent, {
-      // Assigning dialog width
+      // set dialog width
       width: '500px'
     });
   }

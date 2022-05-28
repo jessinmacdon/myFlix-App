@@ -29,7 +29,7 @@ export class MovieCardComponent implements OnInit {
   }
 
   /**
-   * Gets movies from api call and sets the movies state to return JSON file
+   * Gets movies - sets the movies state to return a JSON file - Api call
    * @returns array holding movies objects
    */
   getMovies(): void {
@@ -40,7 +40,7 @@ export class MovieCardComponent implements OnInit {
   }
 
   /**
-   * Gets favorite movies from api call and sets the favorite movies variable to return JSON file
+   * Gets favourite movies and sets the favourite movies variable to return a JSON file
    * @returns array holding ids of user's favorite movies
    */
   getFavouriteMovies(): void {
@@ -51,16 +51,16 @@ export class MovieCardComponent implements OnInit {
   }
 
   /**
-   * checks if a movie is included in the user's list of favorite movies
+   * checks if a movie is included in the user's list of favourite movies
    * @param id 
-   * @returns true, if the movie is a favorite move, else false
+   * @returns true, if the movie exists in the favourite movie list, else false
    */
   isFav(Id: string): boolean {
     return this.favouriteMovies.includes(Id)
   }
 
   /**
-  * opens the user genre dialog from GenreComponent to displaying details
+  * opens the genre dialog from GenreComponent to displaying details about the movie genre
   * @param name
   * @param description
   */
@@ -76,7 +76,7 @@ export class MovieCardComponent implements OnInit {
   }
 
   /**
-  * opens the user director dialog from DirectorComponent to displaying details
+  * opens the user director info dialog from DirectorComponent to display director details
   * @param name
   * @param bio
   */
@@ -88,14 +88,14 @@ export class MovieCardComponent implements OnInit {
         Birth: birth,
         Death: death,
       },
-      // Assign dialog width
+      // set dialog width
       width: '500px'
     });
 
   }
 
   /**
- * opens the user synopsis dialog from SynopsisComponent to displaying details
+ * opens the user synopsis dialog from Synopsis Component to displaying details about the movie
  * @param title
  * @param description
  */
@@ -105,14 +105,14 @@ export class MovieCardComponent implements OnInit {
         Title: title,
         Description: description,
       },
-      // Assign dialog width
+      // set dialog width
       width: '500px'
     });
 
   }
 
   /**
-   * adds a movie to the list of favorite movies via an API call
+   * API call(post) to add a movie to a user's list of favourite movies 
    * @param id 
    */
   addToFavouriteMovies(id: string): void {
@@ -125,7 +125,7 @@ export class MovieCardComponent implements OnInit {
   }
 
   /**
-   * removes a movie from the list of favorite movies via an API call
+   * API call(delete) to delete a movie from a user's list of favourite movies 
    * @param id 
    */
   removeFromFavouriteMovies(id: string): void {

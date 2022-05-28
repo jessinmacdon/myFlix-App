@@ -28,7 +28,7 @@ export class ProfileComponent implements OnInit {
   }
 
   /**
-   * Gets user data from api call and sets the user variable to returned JSON file
+   * Gets user data from api, then sets the user variable to returned a JSON file
    * @returns object holding user information
    * @function getUser
    */
@@ -40,7 +40,7 @@ export class ProfileComponent implements OnInit {
   }
 
   /**
-   * opens the edit profile dialog from EditProfileComponent to allow user to edit their details
+   * opens the edit profile dialog from EditProfileComponent allowing a user to edit/update their profile
    */
   openEditProfileDialog(): void {
     console.log("this.user --> ", this.user)
@@ -51,8 +51,7 @@ export class ProfileComponent implements OnInit {
   }
 
   /**
-   * Deletes user account
-   * then redirects user back to the welcome page
+   * Deletes a user account - then redirects user back to the welcome page
    * @function deleteUser
    */
   deleteProfile(): void {

@@ -24,13 +24,13 @@ export class UserLoginFormComponent implements OnInit {
   }
 
   /**
-   * sending form inputs for user login to backend via fetchApiData Service
+   * using fetchApiData Service to post user login form inputs to DB
    */
   loginUser(): void {
     this.fetchApiData.userLogin(this.userData).subscribe((result) => {
-      // TBD: Logic for successfull login!
+      // login logic
       this.dialogRef.close(); // Close the modal on success
-      // Add token and username to local Storage
+      // save token and username to local Storage
       localStorage.setItem('token', result.token);
       localStorage.setItem('user', result.user.Username);
       this.snackBar.open(result, 'OK', {
