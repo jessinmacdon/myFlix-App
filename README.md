@@ -31,6 +31,14 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 For this project, I revisited the myFlix movie API I built some time ago. Using Angular to build a client App pulling data from the myFlixDB through API calls.
 
 ---
+
+<p float="left">
+  <img src="src/img/mobile-look-1.png" width="250" />
+  <img src="src/img/mobile-look-2.gif" width="250" /> 
+  <img src="src/img/mobile-look-3.png" width="250" />
+</p>
+
+---
 ### User Stories
 * As a user, I want to be able to receive information on movies, directors, and genres so that I can learn more about movies I’ve watched or am interested in.
 * As a user, I want to be able to create a profile so I can save data about my favourites movies.
@@ -196,3 +204,11 @@ npm install typedoc
 ```
  npx typedoc --out docs --entryPointStrategy expand ./src
 ```
+
+---
+
+![TDesktop view!](src/img/desktop-look-3.gif)
+
+![TDesktop view!](src/img/desktop-look-1.png)
+
+![TDesktop view!](src/img/desktop-look-2.png)
